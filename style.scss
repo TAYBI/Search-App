@@ -1,0 +1,186 @@
+$containerbackgroung: #383636;
+$bodybackgroung: #383636;
+$blue: rgb(89, 178, 238);
+$bluehover: rgb(140, 202, 243);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@mixin inputs {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: none;
+  color: white;
+}
+
+.img {
+  max-width: 15px;
+}
+
+body {
+  background: $bodybackgroung;
+  color: white;
+  font-family: sans-serif;
+
+  .container {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding-top: 3.5rem;
+    .sorry {
+      transform: scale(0);
+    }
+    .title {
+      text-align: center;
+      font-weight: normal;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding-bottom: 3rem;
+
+      a {
+        color: $blue;
+        text-decoration: none;
+        transition: color ease-in-out 0.3s;
+
+        &:hover {
+          color: $bluehover;
+        }
+      }
+    }
+
+    input,
+    select,
+    button {
+      @include inputs();
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: $bodybackgroung;
+      p {
+        letter-spacing: 1.3px;
+      }
+    }
+    .btn {
+      background: darken($color: $blue, $amount: 5%);
+      border: 1px solid $blue;
+      transition: all ease-in-out 0.3s;
+      color: black;
+      &:hover {
+        cursor: pointer;
+        background: $blue;
+      }
+    }
+    option {
+      text-transform: capitalize;
+      color: $bodybackgroung;
+    }
+    select {
+      text-transform: capitalize;
+    }
+    p {
+      display: inline;
+    }
+
+    input[type="number"] {
+      width: 89px;
+    }
+  }
+}
+
+#keyword {
+  width: 500px;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 4rem 0;
+  gap: 20px;
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .card {
+    @include inputs();
+    border-color: lighten($color: $bodybackgroung, $amount: 10%);
+    border-width: 2px;
+    background: lighten($color: $bodybackgroung, $amount: 10%);
+    padding: 0.1rem;
+
+    .card-title {
+      font-size: 1.3rem;
+      letter-spacing: 1.1px;
+      padding: 0.6rem 0;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .card-text {
+      letter-spacing: 1.1px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      width: 100%;
+      text-align: justify !important;
+    }
+
+    .btn {
+      text-decoration: none;
+      display: block;
+      margin-top: 0.7rem;
+      padding: 0.4rem 0;
+      border-radius: 5px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 915px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    #keyword {
+      width: 360px;
+    }
+  }
+}
+
+@media (max-width: 808px) {
+  .container {
+    #keyword {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 744px) {
+  .container {
+    #keyword {
+      width: 260px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .search {
+    transform: scale(0);
+  }
+  .result {
+    display: none;
+  }
+  .sorry {
+    transform: scale(1) !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 02rem;
+    font-weight: 300;
+    padding: 2rem;
+    color: rgb(255, 255, 107);
+  }
+}

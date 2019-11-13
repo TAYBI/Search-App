@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Search App | By Bilal TAYBI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Title and Reddit API URL -->
+      <div class="title">
+        <p>
+          Search App With
+          <a href="https://www.reddit.com/dev/api/" target="_blank"
+            >Reddit API</a
+          >
+        </p>
+      </div>
+
+      <div class="sorry">
+        <p>
+          Sorry, you can't use this app on a device under 720px
+        </p>
+      </div>
+
+      <div class="search">
+        <!-- Input -->
+        <input
+          id="keyword"
+          id="input"
+          type="text"
+          maxlength="512"
+          required
+          placeholder="Max 512 characters"
+        />
+        <div>
+          <p class="limit">Limit:</p>
+          <input
+            type="number"
+            name="limit"
+            id="limit"
+            max="100"
+            min="5"
+            placeholder="(5-100)"
+          />
+        </div>
+        <div>
+          <p class="sort-by">Sort By:</p>
+          <select name="sortby" id="sortby" class="sortby">
+            <option value="relevance">relevance</option>
+            <option value="hot">hot</option>
+            <option value="top">top</option>
+            <option value="new">new</option>
+            <option value="comments">comments</option>
+          </select>
+        </div>
+        <button class="btn">
+          <img class="img" src="search.png" alt="" /> Search
+        </button>
+      </div>
+      <div class="result">
+        <!-- <div class="card">
+          <div class="card-img">
+            <img src="image-not-available.jpg" alt="Not Found" />
+          </div>
+          <h1 class="card-title">Lorem, ipsum.</h1>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+            molestiae adipisci tempora sapiente! Unde, soluta vitae! Explicabo
+            debitis quod recusandae!
+          </p>
+          <a class="btn" href="#" target="_blanck">Read More</a>
+        </div> -->
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
