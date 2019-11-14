@@ -132,30 +132,53 @@ body .container input[type="number"] {
   border-width: 2px;
   background: #524f4f;
   padding: 0.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .result .card .card-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   letter-spacing: 1.1px;
-  padding: 0.6rem 0;
+  padding: 0.7rem 0;
   font-weight: 300;
-  text-transform: uppercase;
+}
+
+.result .card .card-img {
+  width: 100%;
 }
 
 .result .card .card-text {
-  letter-spacing: 1.1px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
-  text-align: justify !important;
+  margin-bottom: 10px;
 }
 
 .result .card .btn {
+  position: relative;
   text-decoration: none;
   display: block;
   margin-top: 0.7rem;
   padding: 0.4rem 0;
   border-radius: 5px;
   text-align: center;
+  margin-top: auto;
+  top: 0;
+}
+
+.sorry2 {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 02rem;
+  font-weight: 300;
+  padding: 2rem;
+  color: #ffff6b;
 }
 
 @media (max-width: 915px) {

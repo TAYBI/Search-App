@@ -18,6 +18,15 @@ $bluehover: rgb(140, 202, 243);
   color: white;
 }
 
+@mixin sorry {
+  transform: scale(1) !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 02rem;
+  font-weight: 300;
+  padding: 2rem;
+  color: rgb(255, 255, 107);
+}
 .img {
   max-width: 15px;
 }
@@ -114,31 +123,40 @@ body {
     border-width: 2px;
     background: lighten($color: $bodybackgroung, $amount: 10%);
     padding: 0.1rem;
-
+    display: flex;
+    flex-direction: column;
     .card-title {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       letter-spacing: 1.1px;
-      padding: 0.6rem 0;
+      padding: 0.7rem 0;
       font-weight: 300;
-      text-transform: uppercase;
+      // text-transform: uppercase;
     }
-
+    .card-img {
+      width: 100%;
+    }
     .card-text {
-      letter-spacing: 1.1px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       width: 100%;
-      text-align: justify !important;
+      margin-bottom: 10px;
     }
 
     .btn {
+      position: relative;
       text-decoration: none;
       display: block;
       margin-top: 0.7rem;
       padding: 0.4rem 0;
       border-radius: 5px;
       text-align: center;
+      margin-top: auto;
+      top: 0;
     }
   }
+}
+
+.sorry2 {
+  @include sorry();
 }
 
 @media (max-width: 915px) {
@@ -175,12 +193,6 @@ body {
     display: none;
   }
   .sorry {
-    transform: scale(1) !important;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    font-size: 02rem;
-    font-weight: 300;
-    padding: 2rem;
-    color: rgb(255, 255, 107);
+    @include sorry();
   }
 }
