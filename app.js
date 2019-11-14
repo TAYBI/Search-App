@@ -11,7 +11,7 @@ form.addEventListener("submit", e => {
   e.preventDefault();
   // fetch the Api
   fetch(
-    `http://www.reddit.com/search.json?q=${keyword.value}&limit=${limit.value}&sort=${sort.value}`
+    `https://www.reddit.com/search.json?q=${keyword.value}&limit=${limit.value}&sort=${sort.value}`
   )
     .then(response => response.json())
     .then(data => data.data.children.map(children => children.data))
